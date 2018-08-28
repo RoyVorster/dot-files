@@ -1,0 +1,21 @@
+[
+	{
+   		"keys": ["ctrl+enter"],
+	    "command": "shell_command",
+	    "args": {
+	    	"prompt": "Enter command",
+	    	"title": "Command",
+	    	"panel": true
+		}
+	}
+
+	{
+		"keys": ["ctrl+shift+B"],
+		"command": "shell_command",
+		"args": {
+			"prompt": "Enter cmake build folder",
+			"title": "Cmake build",
+			"command": "cd ${build_folder:build feature:folder}; make"
+		}
+	}
+]

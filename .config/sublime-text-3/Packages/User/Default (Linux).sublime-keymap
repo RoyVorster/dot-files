@@ -1,0 +1,8 @@
+[
+	{ "keys": ["ctrl+alt+m"], "command": "toggle_minimap" },
+	{ "keys": ["shift+space"], "command": "move", 
+		"args": {"by": "characters", "forward": true} },
+	{ "keys": ["ctrl+alt+t"], "command": "terminal_view_open" },
+	{ "keys": ["ctrl+f1"], "command": "markdown_preview", 
+		"args": {"target": "browser", "parser":"markdown"} }
+]
