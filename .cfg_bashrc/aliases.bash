@@ -13,7 +13,7 @@ alias sus='systemctl suspend; exit'
 alias hib='systemctl hibernate; exit'
 alias update='sudo pacman -Syu'
 
-alias matlab='/home/rvorster/MATLAB/bin/matlab -softwareopengl'
+alias matlab='/home/rvorster/MATLAB/*/bin/matlab -softwareopengl'
 alias mat='primusrun /home/rvorster/MATLAB/bin/matlab -softwareopengl'
 
 alias stm='/home/rvorster/SystemWorkbench/eclipse'
@@ -23,6 +23,7 @@ alias note='/home/rvorster/dynalist/dynalist-1.0.3/dynalist'
 
 # Git aliases
 alias gl='git pull'
+alias ga='git add'
 alias gp='git push'
 alias gd='git diff'
 alias gc='git commit'

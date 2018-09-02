@@ -4,5 +4,8 @@
 		"args": {"by": "characters", "forward": true} },
 	{ "keys": ["ctrl+alt+t"], "command": "terminal_view_open" },
 	{ "keys": ["ctrl+f1"], "command": "markdown_preview", 
-		"args": {"target": "browser", "parser":"markdown"} }
+		"args": {"target": "browser", "parser":"markdown"} },
+
+	{ "keys": ["ctrl+a", "ctrl+left"], "command": "focus_neighboring_group", "args": {"forward": false} },
+	{ "keys": ["ctrl+a", "ctrl+right"], "command": "focus_neighboring_group" }, 
 ]
