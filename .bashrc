@@ -5,7 +5,7 @@ PS1='[\u@\h \W]\$ '
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Include python scripts folder
-export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.bin"
 
 # Get all files from the cfg_bashrc directory
 if [[ -d $HOME/.cfg_bashrc ]] ; then
