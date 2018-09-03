@@ -63,7 +63,7 @@
 	"theme_tab_selected_transparent": true,
 	"theme_tab_size_xs": true,
 	"theme_unified": true,
-	"translate_tabs_to_spaces": false,
+	"translate_tabs_to_spaces": true,
 	"use_simple_full_screen": true,
 	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?_"
 }
