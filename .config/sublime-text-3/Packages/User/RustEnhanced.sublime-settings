@@ -1,0 +1,4 @@
+{
+    "rust_syntax_checking": false,
+    "rust_syntax_hide_warnings": true,
+}
