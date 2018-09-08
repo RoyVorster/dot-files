@@ -6,6 +6,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Include python scripts folder
 export PATH="$PATH:$HOME/.bin"
+export PATH="$PATH:$HOME/.bin/bin"
 
 # Kitty terminal emulator
 source <(kitty + complete setup bash)
