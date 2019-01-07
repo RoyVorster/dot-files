@@ -4,9 +4,15 @@ PS1='[\u@\h \W]\$ '
 # Rust cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Haskell
+export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+
 # Include python scripts folder
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.bin/bin"
+
+# Include CLion 
+export PATH="$PATH:$HOME/CLion/bin"
 
 # Kitty terminal emulator
 source <(kitty + complete setup bash)

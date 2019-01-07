@@ -9,6 +9,9 @@ bind "set completion-map-case on"
 shopt -s dirspell 2> /dev/null
 shopt -s cdspell 2> /dev/null
 
+# Extend regexes
+shopt -s extglob
+
 # CD into directories
 CDPATH=".:$HOME/Documents/"
 shopt -s cdable_vars

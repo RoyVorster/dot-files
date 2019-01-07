@@ -8,18 +8,17 @@ alias edit='subl'
 alias %=' '
 
 alias cls='clear'
-alias optiprime='vblank_mode=0 primusrun'
-alias sus='systemctl suspend; exit'
-alias hib='systemctl hibernate; exit'
-alias update='sudo pacman -Syu'
 
-alias matlab='$HOME/MATLAB/bin/matlab -softwareopengl'
-alias matlabprim='primusrun $HOME/MATLAB/bin/matlab -softwareopengl'
+alias sus='systemctl suspend; exit'
+alias hib='systemctl hibernate -i; exit'
+
+alias matlab='$HOME/MATLAB/2018a/bin/matlab -softwareopengl'
+alias matlabprim='primusrun $HOME/MATLAB/2018a/bin/matlab -softwareopengl'
 
 alias stm='$HOME/SystemWorkbench/eclipse'
 alias stmcube='$HOME/STM32CubeMX/STM32CubeMX'
 
-alias note='$HOME/dynalist/dynalist-1.0.3/dynalist'
+# alias note='$HOME/dynalist/dynalist-1.0.3/dynalist'
 
 # Git aliases
 alias gl='git pull'

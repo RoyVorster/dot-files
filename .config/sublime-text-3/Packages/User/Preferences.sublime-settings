@@ -23,7 +23,7 @@
 	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Monokai.tmTheme",
 	"dictionary": "Packages/Language - English/en_UK.dic",
 	"font_face": "Source Code Pro",
-	"font_size": 10,
+	"font_size": 11,
 	"ignored_packages":
 	[
 		"RestructuredText",
