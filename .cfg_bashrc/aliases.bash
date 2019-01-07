@@ -31,4 +31,4 @@ alias gst='git status'
 alias grt='cd $(git rev-parse --show-toplevel)'
 
 # Dotfiles git command
-alias config='/usr/bin/git --git-dir=/home/rvorster/.cfg/ --work-tree=/home/rvorster'
+alias conf='/usr/bin/git --git-dir=/home/rvorster/.cfg/ --work-tree=/home/rvorster'
