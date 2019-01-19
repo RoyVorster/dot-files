@@ -6,7 +6,9 @@ DISABLE_AUTO_UPDATE="true"
 CASE_SENSITIVE="false"
 
 plugins=(
-    git
+    gitfast
+    cabal
+    python
 )
 
 # Path variables
