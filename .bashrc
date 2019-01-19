@@ -11,17 +11,14 @@ export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.bin/bin"
 
-# Include CLion 
-export PATH="$PATH:$HOME/CLion/bin"
-
 # Kitty terminal emulator
-source <(kitty + complete setup bash)
+# source <(kitty + complete setup bash)
 
 # Get all files from the cfg_bashrc directory
 if [[ -d $HOME/.cfg_bashrc ]] ; then
-  for cfg_files in "$HOME"/.cfg_bashrc/*.bash ; do
-    . "$cfg_files"
-  done
+    for cfg_files in "$HOME"/.cfg_bashrc/*.bash ; do
+        . "$cfg_files"
+    done
 fi
 
 unset -v cfg_files
