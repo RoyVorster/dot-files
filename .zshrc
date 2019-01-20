@@ -1,7 +1,7 @@
 # Oh my zsh
 export ZSH="/home/rvorster/.oh-my-zsh"
 
-ZSH_THEME="agnoster"
+ZSH_THEME="bira_custom"
 DISABLE_AUTO_UPDATE="true"
 CASE_SENSITIVE="false"
 
@@ -17,7 +17,6 @@ export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.bin/bin"
-
 
 # Source zsh config files
 source $ZSH/oh-my-zsh.sh
