@@ -1,0 +1,22 @@
+set -g default-terminal screen-256color
+
+# Status bar
+set -g status-position bottom
+set -g status-justify left
+set -g status-bg colour4
+set -g status-fg colour233
+set -g status-left ' #[bold][#S] '
+set -g status-right '#[fg=colour233,bg=colour6,bold] %d/%m #[fg=colour233,bg=colour250,bold] %H:%M:%S '
+set -g status-right-length 20
+set -g status-left-length 50
+
+# Active window
+setw -g window-status-current-bg colour250
+
+# Panes
+set -g pane-active-border-bg colour0
+set -g pane-active-border-fg colour250
+
+# Main
+setw -g mode-fg colour4
+setw -g mode-bg colour250
