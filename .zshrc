@@ -18,10 +18,12 @@ export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.bin/bin"
 
+export PYTHONPATH="$PYTHONPATH:$HOME/.local/bin"
+
 # Source zsh config files
 source $ZSH/oh-my-zsh.sh
 
-for f in ~/.cfg_zshrc/**/*.zsh; do
+for f in $HOME/.cfg_zshrc/**/*.zsh; do
     source $f
 done
 
