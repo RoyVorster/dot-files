@@ -17,8 +17,9 @@ export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.bin/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
-export PYTHONPATH="$PYTHONPATH:$HOME/.local/bin"
+#export PYTHONPATH="$PYTHONPATH:$HOME/.local/bin"
 
 # Source zsh config files
 source $ZSH/oh-my-zsh.sh
