@@ -19,6 +19,8 @@ export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.bin/bin"
 export PATH="$PATH:$HOME/.local/bin"
 
+alias sudo='sudo '
+
 #export PYTHONPATH="$PYTHONPATH:$HOME/.local/bin"
 
 # Source zsh config files
