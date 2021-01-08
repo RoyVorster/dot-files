@@ -11,3 +11,7 @@ alias stmcube='$HOME/STM32CubeMX/STM32CubeMX'
 alias conf='/usr/bin/git --git-dir=/home/rvorster/.cfg/ --work-tree=/home/rvorster'
 
 alias rsync='rsync -av'
+
+alias eps-export='. ~/.tmp/esp-idf/export.sh'
+
+alias nb='jupyter notebook --no-browser --port 8081'
