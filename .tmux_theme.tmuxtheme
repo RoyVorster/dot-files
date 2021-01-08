@@ -11,12 +11,12 @@ set -g status-right-length 20
 set -g status-left-length 50
 
 # Active window
-setw -g window-status-current-bg colour250
+setw -g window-status-current-style bg=colour250
 
 # Panes
-set -g pane-active-border-bg colour0
-set -g pane-active-border-fg colour250
+set -g pane-active-border-style bg=colour0
+set -g pane-active-border-style fg=colour250
 
 # Main
-setw -g mode-fg colour4
-setw -g mode-bg colour250
+setw -g mode-style fg=colour4
+setw -g mode-style bg=colour250
