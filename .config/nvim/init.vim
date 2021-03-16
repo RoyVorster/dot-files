@@ -15,6 +15,8 @@ set nobackup
 set noswapfile
 set incsearch
 set linebreak
+set cmdheight=2
+set mouse=a
 
 set shiftwidth=4
 set softtabstop=4 tabstop=4
@@ -35,7 +37,7 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'pangloss/vim-javascript'
 Plug 'tomasr/molokai'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
