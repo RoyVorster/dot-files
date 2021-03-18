@@ -22,3 +22,4 @@ if [[ -d $HOME/.cfg_bashrc ]] ; then
 fi
 
 unset -v cfg_files
+source "$HOME/.cargo/env"
