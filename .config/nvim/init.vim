@@ -15,7 +15,7 @@ set nobackup
 set noswapfile
 set incsearch
 set linebreak
-set cmdheight=2
+set cmdheight=1
 set mouse=a
 
 set shiftwidth=4
