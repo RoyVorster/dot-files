@@ -18,6 +18,7 @@ alias rsync='rsync -av'
 alias esp-init='. ~/.tmp/esp-idf/export.sh'
 
 alias nb='jupyter notebook --no-browser --port 8081'
+alias nb-lab='jupyter lab --no-browser --port 8081'
 
 # Git aliases
 alias gl='git pull'
