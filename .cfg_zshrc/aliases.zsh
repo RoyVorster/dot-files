@@ -7,6 +7,7 @@ alias sus='systemctl suspend; exit'
 alias hib='systemctl hibernate -i; exit'
 
 alias matlab='$HOME/.matlab/matlab/bin/matlab -softwareopengl'
+alias matlab2021a='$HOME/.matlab/R2021a/bin/matlab -softwareopengl'
 
 alias stm='$HOME/SystemWorkbench/eclipse'
 alias stmcube='$HOME/STM32CubeMX/STM32CubeMX'
