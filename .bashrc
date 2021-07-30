@@ -23,3 +23,5 @@ fi
 
 unset -v cfg_files
 source "$HOME/.cargo/env"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

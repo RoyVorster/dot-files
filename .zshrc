@@ -26,3 +26,5 @@ for f in ~/.cfg_zshrc/**/*.zsh; do
 done
 
 unset -v f
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
