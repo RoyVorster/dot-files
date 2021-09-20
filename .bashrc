@@ -11,9 +11,6 @@ export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.bin/bin"
 
-# Kitty terminal emulator
-# source <(kitty + complete setup bash)
-
 # Get all files from the cfg_bashrc directory
 if [[ -d $HOME/.cfg_bashrc ]] ; then
     for cfg_files in "$HOME"/.cfg_bashrc/*.bash ; do
@@ -21,7 +18,11 @@ if [[ -d $HOME/.cfg_bashrc ]] ; then
     done
 fi
 
+# Use ZSH aliases as well
+source $HOME/.cfg_zshrc/aliases.zsh
+
 unset -v cfg_files
 source "$HOME/.cargo/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+

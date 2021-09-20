@@ -18,6 +18,8 @@ export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.bin/bin"
 
+export PATH="$PATH:$HOME/julia/bin"
+
 # Source zsh config files
 source $ZSH/oh-my-zsh.sh
 
@@ -28,3 +30,4 @@ done
 unset -v f
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

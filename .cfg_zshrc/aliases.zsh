@@ -6,7 +6,7 @@ alias cls='clear'
 alias sus='systemctl suspend; exit'
 alias hib='systemctl hibernate -i; exit'
 
-alias matlab='$HOME/.matlab/matlab/bin/matlab -softwareopengl'
+alias matlab2020b='$HOME/.matlab/matlab/bin/matlab -softwareopengl'
 alias matlab2021a='$HOME/.matlab/R2021a/bin/matlab -softwareopengl'
 
 alias stm='$HOME/SystemWorkbench/eclipse'
@@ -30,3 +30,8 @@ alias gc='git commit'
 alias gco='git checkout'
 alias gst='git status'
 alias grt='cd $(git rev-parse --show-toplevel)'
+alias glo='git log --graph --decorate --all'
+
+# NVIDIA prime
+alias nvid='''echo 'NVIDIA'; export __NV_PRIME_RENDER_OFFLOAD=1; export __GLX_VENDOR_LIBRARY_NAME=nvidia;'''
+
