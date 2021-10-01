@@ -6,7 +6,6 @@ alias cls='clear'
 alias sus='systemctl suspend; exit'
 alias hib='systemctl hibernate -i; exit'
 
-alias matlab2020b='$HOME/.matlab/matlab/bin/matlab -softwareopengl'
 alias matlab2021a='$HOME/.matlab/R2021a/bin/matlab -softwareopengl'
 
 alias stm='$HOME/SystemWorkbench/eclipse'
