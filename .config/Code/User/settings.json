@@ -25,5 +25,10 @@
         "jupyter-notebook": "left"
     },
     "window.zoomLevel": -1,
-    "javascript.updateImportsOnFileMove.enabled": "never"
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "vim.handleKeys": {
+         "<C-f>": false,
+         "<C-w>": false,
+         "<C-c>": false
+    }
 }
