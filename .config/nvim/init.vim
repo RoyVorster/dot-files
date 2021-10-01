@@ -1,10 +1,10 @@
 " Basics
 syntax on
-filetype plugin on
+filetype plugin indent on
 
 " Settings
 set shell=/usr/bin/zsh
-set rnu
+set nu rnu
 set expandtab
 set path=.,**
 set ai
@@ -25,19 +25,27 @@ let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:netrw_winsize=20
 
+" nice remaps
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " macros
 :nnoremap <F3> :put=strftime('%Y-%m-%d %X')<CR>
+:nnoremap <C-p> :GFiles<CR>
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
 Plug 'preservim/nerdcommenter'
 Plug 'morhetz/gruvbox'
-Plug 'tomasiser/vim-code-dark'
 Plug 'pangloss/vim-javascript'
-Plug 'tomasr/molokai'
 Plug 'maxmellon/vim-jsx-pretty'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovimhaskell/haskell-vim'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
