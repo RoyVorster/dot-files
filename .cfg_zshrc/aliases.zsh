@@ -20,6 +20,8 @@ alias esp-init='. ~/.tmp/esp-idf/export.sh'
 alias nb='jupyter notebook --no-browser --port 8081'
 alias nb-lab='jupyter lab --no-browser --port 8081'
 
+alias l='ls -al'
+
 # Git aliases
 alias gl='git pull'
 alias ga='git add'
