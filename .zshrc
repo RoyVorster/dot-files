@@ -31,6 +31,7 @@ unset -v f
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export EDITOR=$(which nvim)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
