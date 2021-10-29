@@ -1,5 +1,5 @@
 # Oh my zsh
-export ZSH="/home/rvorster/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="bira_custom"
 DISABLE_AUTO_UPDATE="true"

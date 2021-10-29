@@ -11,7 +11,7 @@ alias matlab2021a='$HOME/.matlab/R2021a/bin/matlab -softwareopengl'
 alias stm='$HOME/SystemWorkbench/eclipse'
 alias stmcube='$HOME/STM32CubeMX/STM32CubeMX'
 
-alias conf='/usr/bin/git --git-dir=/home/rvorster/.cfg/ --work-tree=/home/rvorster'
+alias conf='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias rsync='rsync -av'
 
