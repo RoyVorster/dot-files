@@ -23,7 +23,6 @@ alias nb-lab='jupyter lab --no-browser --port 8081'
 alias l='ls -al'
 
 alias ibrew="arch -x86_64 /usr/local/bin/brew"
-alias python3.7='/usr/local/opt/python@3.7/bin/python3'
 
 # Git aliases
 alias gl='git pull'
