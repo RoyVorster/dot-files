@@ -15,7 +15,7 @@ alias conf='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias rsync='rsync -av'
 
-alias esp-init='. ~/.tmp/esp-idf/export.sh'
+alias esp-init='. ~/esp/esp-idf/export.sh'
 
 alias nb='jupyter notebook --no-browser --port 8081'
 alias nb-lab='jupyter lab --no-browser --port 8081'
