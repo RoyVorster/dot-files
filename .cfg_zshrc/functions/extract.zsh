@@ -1,5 +1,6 @@
-# Extract different type file types
+#!/bin/zsh
 
+# Extract different type file types (largely copied from somewhere)
 extr () {
     if [ -f $1 ]; then
         case $1 in

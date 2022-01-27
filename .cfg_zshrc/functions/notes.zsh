@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-d='/home/rvorster/fun/notes/'
+d='$HOME/fun/notes/'
 alias note-dir='cd $d'
 
 function new-note-dir {
