@@ -25,13 +25,14 @@ let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:netrw_winsize=20
 
-" nice remaps
+" nice remaps + macros
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-" macros
-:nnoremap <F3> :put=strftime('%Y-%m-%d %X')<CR>
-:nnoremap <C-p> :GFiles<CR>
+noremap <F3> :put=strftime('%Y-%m-%d %X')<CR>
+noremap <C-p> :GFiles<CR>
+noremap <C-j> 10j
+noremap <C-k> 10k
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
