@@ -17,7 +17,6 @@ export PATH="$PATH:$HOME/julia/bin"
 
 # Source zsh config files
 source $ZSH/oh-my-zsh.sh
-
 for f in ~/.cfg_zshrc/**/*.zsh; do source $f; done
 unset -v f
 
@@ -42,7 +41,7 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/rvorster/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
