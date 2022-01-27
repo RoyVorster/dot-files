@@ -26,10 +26,12 @@ unset -v f
 export EDITOR=$(which nvim)
 
 # Pyenv
-export PYENV_ROOT="$HOME/.pyenv" 
-export PATH="$PATH:$PYENV_ROOT/bin" 
-eval "$(pyenv init --path)" 
-eval "$(pyenv init -)"
+if [[ $OSTYPE == 'darwin'* ]]; then
+    export PYENV_ROOT="$HOME/.pyenv" 
+    export PATH="$PATH:$PYENV_ROOT/bin" 
+    eval "$(pyenv init --path)" 
+    eval "$(pyenv init -)"
+fi
 
 # NVM
  export NVM_DIR="$HOME/.nvm"
