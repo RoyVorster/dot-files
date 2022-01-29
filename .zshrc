@@ -38,8 +38,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" --no-use
 
 # ghcup
-[ -f "/Users/rvorster/.ghcup/env" ] && source "/Users/rvorster/.ghcup/env"
+[ -s "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
 
 # conda
-source "$HOME/miniforge3/etc/profile.d/conda.sh"
+[ -d "$HOME/miniforge3/" ] && source "$HOME/miniforge3/etc/profile.d/conda.sh"
 
