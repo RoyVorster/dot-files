@@ -13,7 +13,8 @@ function nn {
     if [[ $# -eq 0 ]]; then echo 'Name required: nn [NAME] [OPT:DIR]' && return; fi
 
     local dd=$d
-    if [[ ! -z $2 ]]; then echo $2; dd=$d/$2 &&  mkdir -p $dd; fi
+    if [[ ! -z $2 ]]; then; dd=$d/$2; fi
+    mkdir -p $dd
 
     nvim $dd/$(date +'%Y-%m-%d')-$1.md
 }
