@@ -67,3 +67,7 @@ let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_conceal=1
 set conceallevel=2
 
+augroup Markdown
+  autocmd!
+  autocmd FileType markdown set wrap
+augroup END
