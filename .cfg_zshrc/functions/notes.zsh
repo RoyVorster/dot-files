@@ -4,7 +4,8 @@ export d="$HOME/notes";
 
 # Edit note
 function ne {
-    f=$(find $d -type d -or -type f -name "*.md" -depth -mindepth 1 | fzf --height 30% -m --reverse --query "$1")
+    f=$(find $d -type d -or -type f -name "*.md" -or -not -path '*.*' -depth -mindepth 1 \
+        | fzf --height 30% -m --reverse --query "$1")
     if [[ $f ]]; then nvim $f; fi
 }
 
