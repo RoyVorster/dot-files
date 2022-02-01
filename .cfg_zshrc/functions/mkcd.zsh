@@ -1,5 +1,3 @@
-# Make directory and cd into it in one go
+#!/bin/zsh
 
-function mkcd() {
-    mkdir -p "$1" && cd "$1";
-}
+function mkcd() { mkdir -p "$1" && cd "$1" }
