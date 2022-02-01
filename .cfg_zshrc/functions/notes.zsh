@@ -2,10 +2,19 @@
 
 export d="$HOME/notes";
 
-# Edit note
+# List notes
+function nls {
+    find $d -type d -or -type f -name "*.md" -or -not -path '*.*' -depth -mindepth 1
+}
+
+# Open random note
+function nr {
+    nvim $(nls | sort -R | tail -n 1)
+}
+
+# Open note
 function ne {
-    f=$(find $d -type d -or -type f -name "*.md" -or -not -path '*.*' -depth -mindepth 1 \
-        | fzf --height 30% -m --reverse --query "$1")
+    f=$(nls | fzf --height 30% -m --reverse --query "$1")
     if [[ $f ]]; then nvim $f; fi
 }
 
