@@ -71,3 +71,8 @@ augroup Markdown
   autocmd!
   autocmd FileType markdown set wrap
 augroup END
+
+augroup tex
+  autocmd!
+  autocmd FileType tex set wrap
+augroup END
