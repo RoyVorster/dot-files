@@ -15,7 +15,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Path variables
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$PATH:$HOME/julia/bin"
+export PATH="$HOME/julia/bin:$PATH"
+
+export GOPATH="$HOME/go/"
+export PATH="$GOPATH/bin:$PATH"
 
 # Source zsh config files
 for f in ~/.cfg_zshrc/**/*.zsh; do source $f; done

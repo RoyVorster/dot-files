@@ -54,6 +54,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+Plug 'ray-x/go.nvim'
+
 call plug#end()
 
 let g:vim_monokai_tasty_italic=1
