@@ -9,3 +9,8 @@ unset -v f
 
 # Use ZSH aliases
 source $HOME/.cfg_zshrc/aliases.zsh
+
+# ROS
+rospath="/opt/ros/melodic/setup.bash"
+[ -f $rospath ] && source $rospath
+
