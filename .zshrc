@@ -37,8 +37,8 @@ if [[ $OSTYPE == 'darwin'* ]]; then
 fi
 
 # NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" --no-use
+[ -s "$HOME/.nvm/nvm.sh" ] && source "$HOME/.nvm/nvm.sh" --no-use  # Mac NVM
+[ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh" --no-use  # Linux NVM
 
 # ghcup
 [ -s "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
