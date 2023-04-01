@@ -17,6 +17,9 @@ alias nb-lab='jupyter lab --no-browser --port 8081'
 
 alias ibrew="arch -x86_64 /usr/local/bin/brew"
 
+# Running insider edition on asahi
+[ type "code" &> /dev/null ] || alias code="code-insiders"
+
 # Git aliases
 alias gl='git pull'
 alias ga='git add'
