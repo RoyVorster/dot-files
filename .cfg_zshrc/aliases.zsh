@@ -25,6 +25,7 @@ alias gd='git diff'
 alias gc='git commit'
 alias gco='git checkout'
 alias gst='git status'
+alias gstu='git status -uno'
 alias grt='cd $(git rev-parse --show-toplevel)'
 alias glo='git log --graph --decorate --all'
 

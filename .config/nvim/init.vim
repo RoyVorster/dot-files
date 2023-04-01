@@ -30,7 +30,6 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 noremap <F3> :put=strftime('%Y-%m-%d %X')<CR>
-noremap <C-p> :GFiles<CR>
 noremap <C-j> 10j
 noremap <C-k> 10k
 
@@ -45,7 +44,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'airblade/vim-gitgutter'

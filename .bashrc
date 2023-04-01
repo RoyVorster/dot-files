@@ -14,3 +14,5 @@ source $HOME/.cfg_zshrc/aliases.zsh
 rospath="/opt/ros/melodic/setup.bash"
 [ -f $rospath ] && source $rospath
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

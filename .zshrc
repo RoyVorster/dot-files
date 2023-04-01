@@ -46,3 +46,7 @@ export NVM_DIR="$HOME/.nvm"
 # conda
 [ -d "$HOME/miniforge3/" ] && source "$HOME/miniforge3/etc/profile.d/conda.sh"
 
+# open ai keys
+export OPENAI_API_KEY_FILE="$HOME/.openai-api-key"
+[ -s $OPENAI_API_KEY_FILE ] && export OPENAI_API_KEY=$(cat $OPENAI_API_KEY_FILE)
+
