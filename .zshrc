@@ -1,3 +1,6 @@
+# Source aliases etc...
+for f in $(find "$HOME/.shell_config/" -type f); do source $f; done
+
 # Oh my zsh
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -11,7 +14,9 @@ plugins=(
     python
 )
 
-source $ZSH/oh-my-zsh.sh
+source-if-exists "$ZSH/oh-my-zsh.sh"
+
+export EDITOR=$(which nvim)
 
 # Path variables
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -20,13 +25,8 @@ export PATH="$HOME/julia/bin:$PATH"
 export GOPATH="$HOME/go/"
 export PATH="$GOPATH/bin:$PATH"
 
-# Source zsh config files
-for f in ~/.cfg_zshrc/**/*.zsh; do source $f; done
-unset -v f
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export EDITOR=$(which nvim)
+# FZF
+source-if-exists "$HOME/.fzf.zsh"
 
 # Pyenv
 if [[ $OSTYPE == 'darwin'* ]]; then
@@ -37,14 +37,13 @@ if [[ $OSTYPE == 'darwin'* ]]; then
 fi
 
 # NVM
-[ -s "$HOME/.nvm/nvm.sh" ] && source "$HOME/.nvm/nvm.sh" --no-use  # Mac NVM
-[ -s "/usr/share/nvm/init-nvm.sh" ] && source "/usr/share/nvm/init-nvm.sh" --no-use  # Linux NVM
+source-if-exists "/usr/share/nvm/init-nvm.sh" --no-use
 
 # ghcup
-[ -s "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
+source-if-exists "$HOME/.gchup/env"
 
 # conda
-[ -d "$HOME/miniforge3/" ] && source "$HOME/miniforge3/etc/profile.d/conda.sh"
+source-if-exists "$HOME/miniforge3/etc/profile.d/conda.sh"
 
 # open ai keys
 export OPENAI_API_KEY_FILE="$HOME/.openai-api-key"

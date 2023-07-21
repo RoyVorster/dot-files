@@ -1,12 +1,11 @@
-alias conf='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias conf='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'  # dot-files git
 
 alias l='ls -al'
 alias grep='grep --color=auto'
 alias cls='clear'
 
-alias R="/opt/homebrew/opt/r/bin/R --vanilla"
-
-alias matlab="/Applications/MATLAB_R2021b.app/bin/matlab -nodesktop -nojvm"
+alias R="/opt/homebrew/opt/r/bin/R --vanilla"  # Mac
+alias matlab="/Applications/MATLAB_R2021b.app/bin/matlab -nodesktop -nojvm"  # Mac
 
 alias rsync='rsync -av'
 
@@ -15,7 +14,7 @@ alias esp-init='. ~/esp/esp-idf/export.sh'
 alias nb='jupyter notebook --no-browser --port 8081'
 alias nb-lab='jupyter lab --no-browser --port 8081'
 
-alias ibrew="arch -x86_64 /usr/local/bin/brew"
+alias ibrew="arch -x86_64 /usr/local/bin/brew"  # Mac
 
 # Running insider edition on asahi
 [ type "code" &> /dev/null ] || alias code="code-insiders"
@@ -25,6 +24,7 @@ alias gl='git pull'
 alias ga='git add'
 alias gp='git push'
 alias gd='git diff'
+alias gdc='git diff --cached'
 alias gc='git commit'
 alias gco='git checkout'
 alias gst='git status'
@@ -32,3 +32,7 @@ alias gstu='git status -uno'
 alias grt='cd $(git rev-parse --show-toplevel)'
 alias glo='git log --graph --decorate --all'
 
+mkcd() { mkdir -p "$1" && cd "$1"; }
+
+# Easy source things
+source-if-exists() { [[ -d "$1" || -f "$1" ]] && source "$1"; }

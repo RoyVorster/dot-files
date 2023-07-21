@@ -1,10 +1,9 @@
-#!/bin/zsh
-
 export NOTE_DIR="$HOME/notes";
+[ ! -d $NOTE_DIR ] && mkdir -p $NOTE_DIR
 
 # List notes
 function nls {
-    find $NOTE_DIR -type d -or -type f -name "*.md" -or -not -path '*.*' -depth -mindepth 1
+    find $NOTE_DIR -depth -mindepth 1 -type d -or -type f -name "*.md" -or -not -path '*.*'
 }
 
 # Open random note
@@ -23,7 +22,8 @@ function nn {
     if [[ $# -eq 0 ]]; then echo 'Name required: nn [NAME] [OPT:DIR]' && return; fi
 
     local dd=$NOTE_DIR
-    if [[ ! -z $2 ]]; then; dd=$dd/$2; fi
+    
+    if [[ ! -z $2 ]]; then dd=$dd/$2; fi
     mkdir -p $dd
 
     nvim $dd/$(date +'%Y-%m-%d')-$1.md
