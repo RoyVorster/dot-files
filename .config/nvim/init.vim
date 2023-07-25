@@ -71,6 +71,7 @@ set conceallevel=2
 augroup Markdown
   autocmd!
   autocmd FileType markdown set wrap
+  autocmd FileType markdown set breakindent
 augroup END
 
 augroup tex
