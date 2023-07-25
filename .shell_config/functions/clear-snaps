@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Annoying ubuntu snaps, these things can take up a lot of space
 function clear-snaps {
     sudo snap list --all | awk '/disabled/{print $1, $3}' | \
