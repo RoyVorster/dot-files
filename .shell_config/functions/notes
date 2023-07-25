@@ -1,31 +1,80 @@
-export NOTE_DIR="$HOME/notes";
-[ ! -d $NOTE_DIR ] && mkdir -p $NOTE_DIR
+#!/bin/bash
 
-# List notes
-function nls {
-    find $NOTE_DIR -depth -mindepth 1 -type d -or -type f -name "*.md" -or -not -path '*.*'
+export NOTE_DIR="$HOME/notes"  # Base path
+
+# Re-use same FZF config everywhere here
+function fzf-notes() { fzf --layout=reverse --height=30% -m --query="$1" --header="$2"; }
+
+# List all folders including base folder
+function list-note-folders() {
+    find "$NOTE_DIR" -depth -type d
 }
 
-# Open random note
-function nr {
-    nvim $(nls | sort -R | tail -n 1)
+# List all notes (in directory if specified) where notes are just markdown files
+function list-notes() {
+    if [[ -n $1 ]]; then [[ ${1:0:1} = / ]] && dir=$1 || dir=$NOTE_DIR/$1; fi
+    find "${dir:-$NOTE_DIR}" -depth -mindepth 1 -type f -name "*.md"
 }
 
-# Open note
-function ne {
-    f=$(nls | fzf --height 30% -m --reverse --query "$1")
-    if [[ $f ]]; then nvim $f; fi
+function list-all() {
+    find "$NOTE_DIR" -not -path "*/\.*"
 }
 
-# New note
-function nn {
-    if [[ $# -eq 0 ]]; then echo 'Name required: nn [NAME] [OPT:DIR]' && return; fi
-
-    local dd=$NOTE_DIR
-    
-    if [[ ! -z $2 ]]; then dd=$dd/$2; fi
-    mkdir -p $dd
-
-    nvim $dd/$(date +'%Y-%m-%d')-$1.md
+# Edit a note. Use fzf to select file
+function edit-note() {
+    note=$(list-notes | fzf-notes "${1:-""}" "Select file to edit:")
+    [[ $note ]] && $EDITOR "$note"
 }
 
+# Open a notes folder in finder/browser
+function open-anything() {
+    open $(list-all | fzf-notes "$NOTE_DIR" "Select file/folder:")
+}
+
+# Just create a new note folder. Use fzf to select folder
+function new-note-folder() {
+    if [[ $# -eq 0 ]]; then echo 'New folder name required' && return; fi
+
+    folder=$(list-note-folders | fzf-notes "$NOTE_DIR" "Select base folder:")/$1
+    mkdir -p "$folder"
+}
+
+# Create a new note. Use fzf to select folder
+function new-note() {
+    # Create new folder if argument includes folder name
+    newfolder=$(dirname "${1:-""}")
+    [[ $newfolder == "." ]] && newfolder=""
+
+    folder=$(list-note-folders | fzf-notes "" "Select base folder:")/$newfolder
+    mkdir -p "$folder"
+
+    # Create file name based on argument
+    prefix=$(date +'%Y-%m-%d')
+    [[ ! $1 ]] && note=$prefix.md || note=$prefix-$(basename "$1").md
+
+    # Open
+    $EDITOR "$folder/$note"
+}
+
+# Save any webpage to the given note folder
+function save-webpage-to-note-folder() {
+    if [[ $# -eq 0 ]]; then echo 'Webpage link required' && return; fi
+
+    folder=$(list-note-folders | fzf-notes "")
+
+    # Generate filename from URL if unspecified
+    filename=$2
+    if [[ ! $filename ]]; then
+        filename=${1#https://}; filename=${filename#http://};
+        filename=$(sed 's/[/:]/_/g' <<< "$filename")
+    fi
+
+    wget --user-agent="Mozilla" "$1" -O "$folder/$filename" --no-check-certificate
+}
+
+# Shorthand
+alias no=open-anything
+alias ne=edit-note
+alias nn=new-note
+alias nnf=new-note-folder
+alias ns=save-webpage-to-note-folder
