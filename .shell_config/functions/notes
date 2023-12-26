@@ -22,13 +22,13 @@ function list-all() {
 
 # Edit a note. Use fzf to select file
 function edit-note() {
-    note=$(list-notes | fzf-notes "${1:-""}" "Select file to edit:")
+    note=$(list-notes "$@" | fzf-notes "${1:-""}" "Select file to edit:")
     [[ $note ]] && $EDITOR "$note"
 }
 
 # Open a notes folder in finder/browser
 function open-anything() {
-    open $(list-all | fzf-notes "$NOTE_DIR" "Select file/folder:")
+    open "$(list-all | fzf-notes "" "Select file/folder:")"
 }
 
 # Just create a new note folder. Use fzf to select folder
@@ -62,14 +62,18 @@ function save-webpage-to-note-folder() {
 
     folder=$(list-note-folders | fzf-notes "")
 
-    # Generate filename from URL if unspecified
     filename=$2
-    if [[ ! $filename ]]; then
-        filename=${1#https://}; filename=${filename#http://};
-        filename=$(sed 's/[/:]/_/g' <<< "$filename")
+    if [[ $1 == *"youtube"* ]]; then
+        [[ ! $filename ]] && filename="%(fulltitle)s.%(ext)s"
+        yt-dlp "$1" -o "$folder/$filename"
+    else
+        # Generate filename from URL if unspecified
+        if [[ ! $filename ]]; then
+            wget --user-agent="Mozilla" "$1" -P "$folder" --no-check-certificate -E
+        else
+            wget --user-agent="Mozilla" "$1" -O "$folder/$filename" --no-check-certificate -E
+        fi
     fi
-
-    wget --user-agent="Mozilla" "$1" -O "$folder/$filename" --no-check-certificate
 }
 
 # Shorthand
