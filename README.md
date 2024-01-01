@@ -1,6 +1,21 @@
 # Dot files
-Very simple repository for certain configuration files and scripts. Intended for personal use, but feel free to take whatever you like. Am using mac/linux.
+My config files, I use this on mac/linux.
 
-## For reference
-I set this up following a HN thread I read: https://news.ycombinator.com/item?id=11071754. Read the thread for specific information, essentially it comes down to creating a bare git repository in a folder in your home directory, after which you define the work tree as the home directory itself. No symlinks or extra tools are required.
-Check: https://www.atlassian.com/git/tutorials/dotfiles
+## Setup
+[Relevant HN thread](https://news.ycombinator.com/item?id=11071754) and [Atlassian page](https://www.atlassian.com/git/tutorials/dotfiles).
+
+```
+git clone --bare git@github.com:/RoyVorster/dot-files.git $HOME/.cfg
+
+# Intermediate git alias
+alias conf='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+conf config status.showUntrackedFiles no
+
+# Vim plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+Run `conf checkout` and fix conflicts.
+
