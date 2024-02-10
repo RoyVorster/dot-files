@@ -4,7 +4,7 @@ for f in $(find "$HOME/.shell_config/" -type f); do source $f; done
 # Oh my zsh
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="bira_custom"
+ZSH_THEME="arrow-custom"
 DISABLE_AUTO_UPDATE="true"
 CASE_SENSITIVE="false"
 
@@ -48,4 +48,7 @@ source-if-exists "$HOME/miniforge3/etc/profile.d/conda.sh"
 # open ai keys
 export OPENAI_API_KEY_FILE="$HOME/.openai-api-key"
 [ -s $OPENAI_API_KEY_FILE ] && export OPENAI_API_KEY=$(cat $OPENAI_API_KEY_FILE)
+
+# tmux on konsole
+export LANG=C.UTF-8
 
